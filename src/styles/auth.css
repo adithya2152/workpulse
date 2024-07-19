@@ -1,0 +1,5 @@
+.form-register button:disabled {
+    background-color: #ccc;
+    /* cursor: not-allowed; */
+    opacity: 0.7;
+}
