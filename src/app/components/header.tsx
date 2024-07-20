@@ -1,5 +1,5 @@
+import Link from 'next/link';
 import "../../styles/header.css";
-
 
 export default function Header() {
     return (
@@ -7,8 +7,12 @@ export default function Header() {
             <h1>WorkPulse</h1>
             <h2>Employee Payroll System</h2>
             <div className="button-container">
-                <button onClick={() => window.location.href = "/login"}>Login</button>
-                <button onClick={() => window.location.href = "/register"}>Register</button>
+                <Link href="/login">
+                    <button>Login</button>
+                </Link>
+                <Link href="/register">
+                    <button>Register</button>
+                </Link>
             </div>
         </header>
     );

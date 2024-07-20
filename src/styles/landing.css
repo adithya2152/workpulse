@@ -12,9 +12,10 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 80px); /* Adjust based on your header height */
+    height: calc(100vh - 80px); 
     padding: 1rem;
     position: relative;
+    margin-top: 40px;
     top: -50px; /* Adjust the value to move the content up */
 }
 
