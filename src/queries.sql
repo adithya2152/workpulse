@@ -33,3 +33,21 @@ create table owner(
     phone text
 );
 
+
+create table checkin(
+    eid int not null,
+    date date,
+    time time,
+    checkedin boolean not null,
+    primary key(eid, date, time)
+)
+
+
+create table checkout(
+    eid int not null,
+    date date,
+    time time,
+    checkedout boolean not null,
+    primary key(eid, date, time)
+)
+    

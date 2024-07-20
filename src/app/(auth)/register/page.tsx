@@ -130,39 +130,47 @@ export default function Register() {
                 />
 
                 <label htmlFor="email">Email</label>
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="email"
-                    onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
-                    value={credentials.email}
-                    required
-                />
 
-                <button
-                    onClick={handleVerify}
-                    disabled={!credentials.email}  
-                >
-                    {!isSent ? "Verify Email" : "Resend code"}
-                </button>
+                <div className="verify">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="email"
+                        onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
+                        value={credentials.email}
+                        required
+                    />
+
+                    <button
+                        onClick={handleVerify}
+                        disabled={!credentials.email}  
+                    >
+                        {!isSent ? "Verify Email" : "Resend code"}
+                    </button>
+
+                </div>
+               
 
                 {isSent &&
-                    <div>
+                    <div >
                         <label htmlFor="otp">Otp</label>
-                        <input
-                            type="text"
-                            name="otp"
-                            placeholder="otp"
-                            onChange={(e) => setOtp(e.target.value)}
-                            value={otp}
-                            required
-                        />
-                        <button
-                            onClick={handleConfirm}
-                            disabled={!otp}  
-                        >
-                            Confirm
-                        </button>
+                        <div className="otp">
+                            <input
+                                type="text"
+                                name="otp"
+                                placeholder="otp"
+                                onChange={(e) => setOtp(e.target.value)}
+                                value={otp}
+                                required
+                            />
+                            <button
+                                onClick={handleConfirm}
+                                disabled={!otp}  
+                            >
+                                Confirm
+                            </button>
+                        </div>
+                        
                     </div>
                 }
 
